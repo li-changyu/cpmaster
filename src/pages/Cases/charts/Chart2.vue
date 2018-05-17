@@ -14,18 +14,18 @@ export default {
   mounted () {
     var myChart = echarts.init(document.getElementById('echartContainer2'))
     var option = {
-      title : {
-        text: '充电桩分布图',
+      title: {
+        text: '充电桩分布图'
       },
     	geo: {
         map: '四川',
-        itemStyle: {					// 定义样式
-          normal: {					// 普通状态下的样式
-              areaColor: '#404a59',
-              borderColor: '#111'
+        itemStyle: {
+          normal: {
+            areaColor: '#404a59',
+            borderColor: '#111'
           },
-          emphasis: {					// 高亮状态下的样式
-              areaColor: '#2a333d'
+          emphasis: {
+            areaColor: '#2a333d'
           }
         }
       },
@@ -66,13 +66,13 @@ export default {
                 29.07,
                 40
               ]
-            },
+            }
           ]
         }
       ]
     }
     axios.get('/api/sichuan').then((res) => {
-      echarts.registerMap('四川', res.data);
+      echarts.registerMap('四川', res.data)
       myChart.setOption(option)
     })
   }

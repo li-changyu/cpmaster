@@ -12,14 +12,14 @@ export default {
     return {
       imgUrl: [
         {
-          url:'../../../static/banner1.jpg'
+          url: '../../../static/banner1.jpg'
         },
         {
-          url:'../../../static/banner2.jpg'
+          url: '../../../static/banner2.jpg'
         },
         {
-          url:'../../../static/banner3.jpg'
-        },
+          url: '../../../static/banner3.jpg'
+        }
       ]
     }
   }

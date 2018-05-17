@@ -11,38 +11,37 @@ import echarts from 'echarts'
 export default {
   mounted () {
     var myChart = echarts.init(document.getElementById('echartContainer3'))
-    var option = option = {
-      title : {
-          text: 'EV/CV占比',
-          x:'center'
+    var option = {
+      title: {
+        text: 'EV/CV占比',
+        x: 'center'
       },
-      tooltip : {
-          trigger: 'item',
-          formatter: "{a} <br/>{b} : {c} ({d}%)"
+      tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b} : {c} ({d}%)'
       },
       legend: {
-          x : 'center',
-          y : 'bottom',
-          data:['rose1','rose2']
+        x: 'center',
+        y: 'bottom',
+        data: ['rose1', 'rose2']
       },
-      calculable : true,
-      series : [
-          {
-              name: 'ev/cv对比',
-              type:'pie',
-              radius : [30, 110],
-              roseType : 'area',
-              x: '50%',               // for funnel
-              max: 40,                // for funnel
-              sort : 'ascending',     // for funnel
-              data:[
-                  {value:194838, name:'CV'},
-                  {value:65842, name:'EV'}
-              ]
-          }
+      calculable: true,
+      series: [
+        {
+          name: 'ev/cv对比',
+          type: 'pie',
+          radius: [30, 110],
+          roseType: 'area',
+          x: '50%',
+          max: 40,
+          sort: 'ascending',
+          data: [
+            {value: 194838, name: 'CV'},
+            {value: 65842, name: 'EV'}
+          ]
+        }
       ]
-};
-
+    }
     myChart.setOption(option)
   }
 }

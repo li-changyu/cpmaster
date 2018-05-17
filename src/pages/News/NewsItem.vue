@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props:['content']
+  props: ['content']
 }
 </script>
 
